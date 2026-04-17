@@ -1,0 +1,12 @@
+{
+  "name": "shoping-mall",
+  "private": true,
+  "description": "Monorepo root — Heroku runs install/start against /server",
+  "scripts": {
+    "heroku-postbuild": "npm install --prefix server",
+    "start": "npm run start --prefix server"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}

@@ -1,20 +1,13 @@
 {
   "name": "shoping-mall-api",
-  "description": "Shoping-mall Express API (monorepo — builds from /server)",
+  "description": "Shoping-mall Express API — 루트 package.json이 server에 npm install 후 실행",
   "stack": "heroku-24",
   "buildpacks": [
-    {
-      "url": "https://github.com/timanovsky/subdir-heroku-buildpack"
-    },
     {
       "url": "heroku/nodejs"
     }
   ],
   "env": {
-    "PROJECT_PATH": {
-      "description": "Monorepo 안에서 Heroku가 빌드할 디렉터리 (package.json, Procfile 위치)",
-      "value": "server"
-    },
     "MongoDB_ATLAS_URI": {
       "description": "MongoDB Atlas 연결 문자열 (없으면 MONGO_URI 사용)",
       "required": false
