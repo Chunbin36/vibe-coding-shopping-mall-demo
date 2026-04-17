@@ -5,7 +5,14 @@ const morgan = require("morgan");
 const indexRouter = require("./routes");
 
 const app = express();
-const allowedOrigins = ["http://localhost:5173", "http://127.0.0.1:5173"];
+
+const defaultOrigins = ["http://localhost:5173", "http://127.0.0.1:5173"];
+const extraOrigins = process.env.CLIENT_ORIGIN
+  ? process.env.CLIENT_ORIGIN.split(",")
+      .map((s) => s.trim())
+      .filter(Boolean)
+  : [];
+const allowedOrigins = [...defaultOrigins, ...extraOrigins];
 
 // CORS 허용 (프론트엔드와 API 통신용)
 app.use(

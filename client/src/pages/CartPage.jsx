@@ -3,8 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
-const API_BASE_URL = "http://localhost:5000";
+import { API_BASE_URL } from "../config/api";
 const SHIPPING_FEE = 3000;
 const FREE_SHIPPING_MIN = 50000;
 

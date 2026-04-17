@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import SellerSidebar from "../../components/SellerSidebar";
+import { API_BASE_URL } from "../../config/api";
 
-const API_BASE_URL = "http://localhost:5000";
 const PAGE_LIMIT = 8;
 
 const CATEGORY_MAP = { ceramic: "도자", wood: "목공예", glass: "유리", brass: "금속", leather: "가죽", fiber: "섬유" };

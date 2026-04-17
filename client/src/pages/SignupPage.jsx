@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../config/api";
 
 const USER_TYPES = [
   { value: "customer", label: "개인회원", icon: "🛒", desc: "상품 구매 · 리뷰" },
@@ -15,8 +16,6 @@ const initialForm = {
   confirmPassword: "",
   address: "",
 };
-
-const API_BASE_URL = "http://localhost:5000";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PASSWORD_MIN_LENGTH = 8;

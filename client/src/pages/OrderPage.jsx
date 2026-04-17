@@ -8,8 +8,7 @@ import PortOne, {
 import useAuth from "../hooks/useAuth";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
-const API_BASE_URL = "http://localhost:5000";
+import { API_BASE_URL } from "../config/api";
 
 /** Vite `import.meta.env` 값 — 앞뒤 공백·감싼 따옴표 제거 */
 function readEnvTrimmed(value) {

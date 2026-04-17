@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import SellerSidebar from "../../components/SellerSidebar";
-
-const API_BASE_URL = "http://localhost:5000";
+import { API_BASE_URL } from "../../config/api";
 
 const today = new Date()
   .toLocaleDateString("ko-KR", { year: "numeric", month: "2-digit", day: "2-digit" })
