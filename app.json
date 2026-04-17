@@ -1,0 +1,39 @@
+{
+  "name": "shoping-mall-api",
+  "description": "Shoping-mall Express API (monorepo — builds from /server)",
+  "stack": "heroku-24",
+  "buildpacks": [
+    {
+      "url": "https://github.com/timanovsky/subdir-heroku-buildpack"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "PROJECT_PATH": {
+      "description": "Monorepo 안에서 Heroku가 빌드할 디렉터리 (package.json, Procfile 위치)",
+      "value": "server"
+    },
+    "MongoDB_ATLAS_URI": {
+      "description": "MongoDB Atlas 연결 문자열 (없으면 MONGO_URI 사용)",
+      "required": false
+    },
+    "MONGO_URI": {
+      "description": "로컬/대체 MongoDB URI (Atlas가 없을 때)",
+      "required": false
+    },
+    "JWT_SECRET": {
+      "description": "JWT 서명용 비밀키",
+      "required": true
+    },
+    "PORTONE_API_SECRET": {
+      "description": "포트원 REST API 시크릿 (결제 검증)",
+      "required": false
+    },
+    "PORTONE_STORE_ID": {
+      "description": "포트원 storeId 검증용 (선택)",
+      "required": false
+    }
+  }
+}
